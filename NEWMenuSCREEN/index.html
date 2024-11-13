@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1024, height=1366, initial-scale=1.0">
+  <title>Popup Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Background Video Overlay -->
+<div id="backgroundVideo">
+  <video src="./images/Copenhagen Fashion Week.mp4" autoplay loop muted></video>
+</div>
+
+<!-- Main Page Text -->
+<div id="mainText">
+  <h1 class="text-large">COPENHAGEN</h1>
+  <h1 class="text-large">FASHION</h1>
+  <h1 class="text-large">WEEK</h1>
+</div>
+
+<!-- Popup Overlay for Menu -->
+<div id="popupOverlay">
+  <div id="popupMenu">
+    <div id="closePopup" onclick="closePopup()">X</div>
+    <!-- Bubbles with images -->
+    <div class="bubble" onclick="navigateTo('info.html')">
+      <img src="./images/Info.png" alt="Info">
+    </div>
+    <div class="bubble" onclick="navigateTo('location.html')">
+      <img src="./images/Location.png" alt="Location">
+    </div>
+    <div class="bubble" onclick="navigateTo('home.html')">
+      <img src="./images/Home.png" alt="Home">
+    </div>
+    <div class="bubble" onclick="navigateTo('news.html')">
+      <img src="./images/News.png" alt="News">
+    </div>
+    <div class="bubble" onclick="navigateTo('calendar.html')">
+      <img src="./images/Events.png" alt="Calendar">
+    </div>
+    <div class="bubble" onclick="navigateTo('brands.html')">
+      <img src="./images/Chanel.png" alt="Brands">
+    </div>
+  </div>
+</div>
+
+<!-- Sign In Popup -->
+<div id="signInPopup">
+  <div id="signInContent">
+    <div id="signInClose" onclick="closeSignIn()">X</div>
+    <div id="signInHeader">CPHFW</div>
+    <input type="text" placeholder="Enter Username/ Email">
+    <input type="password" placeholder="Enter Password">
+    <div id="createAccount">Create Account</div>
+    <button id="signInButton">Enter</button>
+  </div>
+</div>
+
+<!-- Sign In and Menu Buttons -->
+<div id="signInBtn" onclick="openSignIn()">
+  <img id="signInIcon" src="./images/Login.png" alt="Sign In Icon">Sign In
+</div>
+<div id="menuBtn" onclick="openPopup()">
+  <div class="burger-icon"></div>
+  <div class="burger-icon"></div>
+  <div class="burger-icon"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
